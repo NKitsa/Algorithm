@@ -14,7 +14,7 @@ def min_distance(dist, visited):
             min_index = i
     return min_index
 
-def dijkstra(total_nodes, edges, start, goal):
+def ress(total_nodes, edges, start, goal):
     adj = construc(edges, total_nodes)
     dist = [float('inf')] * total_nodes
     visited = [False] * total_nodes
@@ -45,7 +45,7 @@ def dijkstra(total_nodes, edges, start, goal):
 # ทดสอบ
 if __name__ == "__main__":
     start = 0
-    goal = 6
+    goal = 8
     total_nodes = 9  # เพราะมี node ถึง 8
     edges = [
         [0, 1, 4],
@@ -64,6 +64,6 @@ if __name__ == "__main__":
         [5, 4, 10]
     ]
 
-    cost, path = dijkstra(total_nodes, edges, start, goal)
+    cost, path = ress(total_nodes, edges, start, goal)
     print("ระยะทางรวมสั้นที่สุด:", cost)
     print("เส้นทางที่ใช้:", " → ".join(map(str, path)))
